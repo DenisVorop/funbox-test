@@ -1,0 +1,39 @@
+.main {
+
+    // .main__container
+
+    &__container {}
+
+    // .main__title
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        line-height: 44px;
+        margin: 36px 0px 24px 0px;
+        font-family: 'Exo Thin';
+    }
+
+    // .main__cards
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 80px 40px;
+
+        @media(max-width: 1100px) {
+            justify-content: space-around;
+        }
+    }
+
+    // .main__card
+
+    &__card {
+        &:last-child {
+            margin: 0px 0px 40px 0px;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+.card {
+    position: relative;
+
+    // .card__body
+
+    &__body {
+        height: 100%;
+        padding: 17px 47px;
+        background: #F2F2F2 url('../assets/images/main/Photo.png') -29px 182%/auto auto no-repeat;
+        border-radius: 12px;
+        height: 480px;
+        width: 320px;
+        margin: 0px 0px 14px 0px;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20.3px solid rgb(19, 19, 19);
+            border-top: 20.3px solid rgb(19, 19, 19);
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            position: absolute;
+            z-index: 2;
+            top: -4px;
+            left: -4px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: -10px;
+            left: 16px;
+            width: 4px;
+            height: 55px;
+            // background: #1698D9;
+            transform: rotate(45deg);
+        }
+    }
+
+    // .card__label
+
+    &__label {
+        font-size: 16px;
+        line-height: 19px;
+        color: #666666;
+        margin: 0px 0px 5px 0px;
+    }
+
+    // .card__title
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: #000000;
+        letter-spacing: 1px;
+    }
+
+    // .card__taste
+
+    &__taste {
+        font-size: 24px;
+        line-height: 28px;
+        color: #000000;
+        margin: 0px 0px 14px 0px;
+        letter-spacing: 1px;
+    }
+
+    // .card__infos
+
+    &__infos {
+        font-size: 14px;
+        line-height: 16px;
+        color: #666666;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    // .card__weight
+
+    &__weight {
+        position: absolute;
+        bottom: 11px;
+        right: 11px;
+        font-size: 42px;
+        line-height: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 20px 10px 10px 10px;
+        width: 80px;
+        transition: all 0.3s ease 0s;
+
+        span {
+            font-size: 20px;
+            margin: 7px 0px 0px 0px;
+        }
+    }
+
+    // .card__text
+
+    &__text {
+        text-align: center;
+        font-size: 13px;
+        line-height: 15px;
+
+        span {
+            color: #1698D9;
+
+            p {
+                display: inline-block;
+                border-bottom: 1px dashed #1698D9;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+
+// *** COMMON ***
+
+.border-def {
+    border: 4px solid #1698D9;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+        background: #1698D9;
+    }
+
+    &:hover {
+        border: 4px solid #2EA8E6;
+
+        .bc-def {
+            background: #2EA8E6;
+        }
+
+        &::before {
+            background: #2EA8E6;
+        }
+    }
+}
+
+.border-sel {
+    border: 4px solid #D91667;
+    transition: all 0.3s ease 0s;
+
+    &::before {
+        background: #D91667;
+    }
+
+    &:hover {
+        border: 4px solid #E52E7A;
+
+        .bc-sel {
+            background: #E52E7A;
+        }
+
+        &::before {
+            background: #E52E7A;
+        }
+    }
+}
+
+.border-dis {
+    border: 4px solid #B3B3B3;
+
+    &::before {
+        background: #B3B3B3;
+    }
+}
+
+.bc-def {
+    background: #1698D9;
+}
+
+.bc-sel {
+    background: #D91667;
+}
+
+.bc-dis {
+    background: #B3B3B3;
+}
+
+.color-dis {
+    color: #FFFF66;
+}
+
+.bc-opacity {
+    background-color: rgba(242, 242, 242, 0.8);
+    opacity: .6;
+    width: 320px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 12px;
+}
